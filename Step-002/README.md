@@ -14,3 +14,8 @@
 - `terraform apply`
 - `terraform output`
 
+### Solution tips
+
+1. Change your profile in `provider.tf` file
+2. Personalize your experience with local variables on the top of `main.tf` file
+3. S3 bucket policy is the key to explicit access for CLoud Front to S3 bucket files
