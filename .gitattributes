@@ -1,0 +1,24 @@
+*.bat       text eol=crlf
+*.BAT       text eol=crlf
+*.txt       text eol=lf
+*.md        text eol=lf
+*.rst       text eol=lf
+*.sh        text eol=lf
+*.yml       text eol=lf
+*.py        text eol=lf
+*.html      text eol=lf diff=html
+*.htm       text eol=lf diff=html
+
+*.css       text eol=lf diff=css
+*.js        text eol=lf diff=js
+
+*.tf        text eol=lf
+*.tfvar     text eol=lf
+*.tfstate   text eol=lf
+*.tfstate.backup   text eol=lf
+
+*.jpg		binary
+*.gif		binary
+*.png		binary
+*.gif		binary
+*.zip		binary
