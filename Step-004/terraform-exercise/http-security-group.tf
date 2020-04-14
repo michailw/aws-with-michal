@@ -1,9 +1,9 @@
 locals {
-  security_group_name = "http-inbound-traffic"
+  http_security_group_name = "http-inbound-traffic"
 }
 
 resource "aws_security_group" "http-inbound-traffic" {
-  name        = local.security_group_name
+  name        = local.http_security_group_name
   description = "Allow HTTP and HTTPS inbound traffic"
   vpc_id      = aws_vpc.indacloud-stepbystep.id
 
@@ -31,7 +31,7 @@ resource "aws_security_group" "http-inbound-traffic" {
   }
 
   tags = {
-    Name = local.security_group_name
+    Name = local.http_security_group_name
     Terraform = "true"
   }
 }

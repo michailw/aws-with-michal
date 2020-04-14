@@ -1,9 +1,9 @@
 locals {
-  security_group_name = "ssh-inbound-traffic"
+  ssh_security_group_name = "ssh-inbound-traffic"
 }
 
 resource "aws_security_group" "ssh-inbound-traffic" {
-  name        = local.security_group_name
+  name        = local.ssh_security_group_name
   description = "Allow SSH inbound traffic"
   vpc_id      = aws_vpc.indacloud-stepbystep.id
 
@@ -23,7 +23,7 @@ resource "aws_security_group" "ssh-inbound-traffic" {
   }
 
   tags = {
-    Name = local.security_group_name
+    Name = local.ssh_security_group_name
     Terraform = "true"
   }
 }
