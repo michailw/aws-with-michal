@@ -20,3 +20,8 @@ resource "aws_route_table_association" "route_table_association_a" {
   subnet_id      = aws_subnet.indacloud-stepbystep-subnet-a.id
   route_table_id = aws_route_table.r.id
 }
+
+resource "aws_route_table_association" "route_table_association_b" {
+  subnet_id      = aws_subnet.indacloud-stepbystep-subnet-b.id
+  route_table_id = aws_route_table.r.id
+}
