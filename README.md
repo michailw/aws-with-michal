@@ -15,5 +15,5 @@ This repository contains a set of files required to complete exercises within my
 4. [Step 004](Step-004/) - Set up your first EC2  instance
 	This step explains how to set up your first EC2 instance and access to it.
 	You'll learn about Internet Gateway, routing tables and Elastic IP.
-
-
+5. [Step 005](Step-005/) - Set up your first RDS  instance
+	This step explains how to set up your first RDS instance and access to it.

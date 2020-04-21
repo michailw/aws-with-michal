@@ -1,0 +1,3 @@
+rds_master_password="indacloud"
+rds_delete_protection=false
+rds_skip_final_snapshot=true
