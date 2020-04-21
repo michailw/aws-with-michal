@@ -1,9 +1,18 @@
+locals {
+  db_subnet_group_name = "indacloud-subnet-group"
+  db_rds_name = "IndacloudRDS"
+}
+
 resource "aws_db_subnet_group" "indacloud_subnet_group" {
-  name       = "indacloud-rds-subnet-group"
+  name       = local.db_subnet_group_name
   subnet_ids = [
     aws_subnet.indacloud-stepbystep-subnet-a.id,
     aws_subnet.indacloud-stepbystep-subnet-b.id
   ]
+
+  tags = {
+    Name = local.db_subnet_group_name
+  }
 }
 
 resource "aws_db_instance" "indacloud_rds" {
@@ -12,7 +21,7 @@ resource "aws_db_instance" "indacloud_rds" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  name                 = "indacloudRDS"
+  name                 = local.db_rds_name
   username             = var.rds_master_user
   password             = var.rds_master_password
   parameter_group_name = "default.mysql5.7"
@@ -25,4 +34,8 @@ resource "aws_db_instance" "indacloud_rds" {
   vpc_security_group_ids = [
     aws_security_group.rds-inbound-traffic.id
   ]
+
+  tags = {
+    Name = local.db_rds_name
+  }
 }
