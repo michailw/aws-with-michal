@@ -17,3 +17,5 @@ This repository contains a set of files required to complete exercises within my
 	You'll learn about Internet Gateway, routing tables and Elastic IP.
 5. [Step 005](Step-005/) - Set up your first RDS  instance
 	This step explains how to set up your first RDS instance and access to it.
+6. [Step 006](Step-006/) - How to set up RDS cluster
+	This step explains how to set up your first RDS cluster and access to it.
