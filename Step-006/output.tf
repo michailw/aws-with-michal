@@ -9,3 +9,11 @@ output "vpc_arn" {
 output "bastion_ip" {
   value = aws_eip.bastion_eip.public_ip
 }
+
+output "rds_read_endpoint" {
+  value = aws_rds_cluster.postgresql.reader_endpoint
+}
+
+output "rds_write_endpoint" {
+  value = aws_rds_cluster.postgresql.endpoint
+}
