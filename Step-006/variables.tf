@@ -7,14 +7,19 @@ variable "bastion_host_public_key" {
   type = string
 }
 
+variable "rds_cluster_id" {
+  type = string
+  default = "rds-cluster-test"
+}
+
 variable "rds_master_user" {
   type = string
-  default = "admin"
+  default = "rootuser"
 }
 
 variable "rds_master_password" {
   type = string
-  default = "admin1"
+  default = "admin1admin1"
 }
 
 variable "rds_delete_protection" {
