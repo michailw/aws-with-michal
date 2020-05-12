@@ -19,3 +19,4 @@ This repository contains a set of files required to complete exercises within my
 	This step explains how to set up your first RDS instance and access to it.
 6. [Step 006](Step-006/) - How to set up RDS cluster
 	This step explains how to set up your first RDS cluster and access to it.
+7. [Step 007](Step-007/) - Material related to "Create own Terraform module" video
