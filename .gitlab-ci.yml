@@ -2,12 +2,19 @@ stages:
   - Deploy
 
 Deploy changes:
-  image: hashicorp/terraform:light
+  image:
+    name: hashicorp/terraform:light
+    entrypoint:
+      - '/usr/bin/env'
+      - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
   stage: Deploy
   before_script:
+    - cd Step-008
+    - terraform version
     - terraform init
   script:
-    - terraform apply plan.tfplan
+    - terraform validate
+    - terraform apply -input=false plan.tfplan
   only:
     refs:
       - master
