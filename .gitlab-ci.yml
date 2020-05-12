@@ -1,0 +1,13 @@
+stages:
+  - Deploy
+
+Deploy changes:
+  image: hashicorp/terraform:light
+  stage: Deploy
+  before_script:
+    - terraform init
+  script:
+    - terraform apply plan.tfplan
+  only:
+    refs:
+      - master
